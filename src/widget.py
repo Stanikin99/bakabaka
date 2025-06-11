@@ -1,9 +1,8 @@
 from src.masks import get_mask_account, get_mask_card_number
 
+
 def mask_account_card(account_card: str) -> str:
-    """
-    Обрабатывает информацию о картах и счетах, и выводит маскировку.
-    """
+    """Обрабатывает информацию о картах и счетах, и выводит маскировку."""
     if "Счет" in account_card.lower():
         number_card = account_card[-10:]
         masked_card = get_mask_account(number_card)
